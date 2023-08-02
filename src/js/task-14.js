@@ -1,8 +1,8 @@
-//funkcja/wyrażenie funkcyjne + return(przerywa działanie funkcji)
+//funkcja/wyrażenie funkcyjne + return(wcześniejszy zwrot)
 
 function multiplay (x,y,z) {
     console.log(`Wynikiem mnożenia jest ${ x* y* z}`) ;
-    return
+    return//(przerywa działanie funkcji- tzw. wcześniejszy zwrot)
     console.log(`Wynikiem dodawania jest ${ x + y + z}`) ;
 }
 

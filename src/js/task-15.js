@@ -99,3 +99,46 @@ console.log(locationCountry);
     //Dlatego korzystamy z metody hasOwnProperty(key)
     console.log(dog.hasOwnProperty("name"));
     console.log(dog.hasOwnProperty("legs"));
+
+    //Metody do pracy z obiektami
+    const bookThree = {
+      title: "The Last Kingdom",
+      author: "Bernard Cornwell",
+      genres: ["historical prose", "adventure"],
+      isPublic: true,
+      rating: 8.38,
+      };
+      // Metoda Object.keys()
+
+      const keys = Object.keys(bookThree);
+      for(const key of keys) {
+        //Klucz
+        console.log(key);
+        //Wartość właściwości
+        console.log(bookThree[key]);
+      };
+
+      //Medoda Object.values()
+
+      const fruit = {
+        strawberry: 3,
+        banana: 5,
+        cherry: 7,
+        lemon: 9,
+        tomato: 2,
+      };
+
+      const values = Object.values(fruit);
+
+      let total = 0;
+
+      for (const value of values) {
+        total += value;
+      }
+
+      console.log(total);
+
+      //Metoda Object.entries()
+
+      const entries = Object.entries(fruit);
+      console.log(entries);

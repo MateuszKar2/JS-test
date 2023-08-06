@@ -1,74 +1,113 @@
-//spread , składnia "..." zwraca, rozpakowuje tablicę czyli rozkłada jej elementy na oddzielne argumenty
+// //spread , składnia "..." zwraca, rozpakowuje tablicę czyli rozkłada jej elementy na oddzielne argumenty
 
-const temps = [3, 5, 1324, 3, 454, 34, 9];
+// const temps = [3, 5, 1324, 3, 454, 34, 9];
 
-console.log(temps);
+// console.log(temps);
 
-//nie zadziała
-console.log(Math.max(temps));
+// //nie zadziała
+// console.log(Math.max(temps));
 
-//zadziała
-console.log(Math.max(...temps));
+// //zadziała
+// console.log(Math.max(...temps));
 
 
-const oneTemps = [1, 3, 45, 65, 2];
+// const oneTemps = [1, 3, 45, 65, 2];
 
-const twoTemps = [5, 7, 43, 90, 9];
+// const twoTemps = [5, 7, 43, 90, 9];
 
-const threeTemps = [...oneTemps, ...twoTemps];
-console.log(threeTemps);
-
-// const threeTemps = [...twoTemps,...oneTemps];
+// const threeTemps = [...oneTemps, ...twoTemps];
 // console.log(threeTemps);
 
-//nazwa właściwości jest unikalna i jej wartość można nadpisać 
+// // const threeTemps = [...twoTemps,...oneTemps];
+// // console.log(threeTemps);
 
-//destrukturyzacja obiektów
+//-------------------------------------
+const matriculationExamination = [65, 82, 91, 48, 73];
 
-const book = {
-    title: "The Last Kingdom",
-    author: "Bernard Cornwell",
-    genres: ["historical prose", "adventure"],
-    isPublic: true,
-    rating: 8.38,
-  };
+console.log(matriculationExamination);
 
-  console.log(book);
+// console.log(Math.max(matriculationExamination));
+// console.log(Math.max(...matriculationExamination));
 
-  console.log(book.title);
+const matriculationSubjects = ["Polish", "Mathematics", "English", "Geography", "History"];
 
-  const { 
-    //zmiana nazyw zmiennej(tylko podczas destrukturyzacji)
-    title, 
-    author: ourAuthor, 
-    genres, 
-    isPublic, 
-    rating} = book;
+console.log(matriculationSubjects);
 
-    //dostęp do zmiennej po destrukturyzacji jest czystszy
-console.log(title);
+const matriculation2013 = [...matriculationSubjects,...matriculationExamination];
+console.log(matriculation2013);
 
-    //zmiana nazwy zmiennej
-console.log(ourAuthor);
+//-------------------------------------
 
-//Destrukturyzacja tablic
-//Nawiasy [], zamiast {}
-//KOlejność zmiennych będzie miała znaczenie
+// //nazwa właściwości jest unikalna i jej wartość można nadpisać 
 
-const rgba = [150, 204, 58];
+// //destrukturyzacja obiektów
 
-let red, green, blue;
+// const book = {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["historical prose", "adventure"],
+//     isPublic: true,
+//     rating: 8.38,
+//   };
 
-[red, green, blue] = rgba;
+//   console.log(book);
 
-console.log(`R: ${red}, G: ${green}, B ${blue}`);
+//   console.log(book.title);
 
-const rgbb = [150, 204, 58];
+//   const { 
+//     //zmiana nazyw zmiennej(tylko podczas destrukturyzacji)
+//     title, 
+//     author: ourAuthor, 
+//     genres, 
+//     isPublic, 
+//     rating} = book;
 
-const [black, ...colors] = rgbb;
+//     //dostęp do zmiennej po destrukturyzacji jest czystszy
+// console.log(title);
 
-console.log(black);
-console.log(colors);
+//     //zmiana nazwy zmiennej
+// console.log(ourAuthor);
+
+
+const matriculation2014 = {
+  Polish: 65,
+  Mathematics: 82,
+  English: 91,
+  Geography: 48,
+  History: 73,
+};
+
+console.log(matriculation2014);
+
+const {
+  Polish,
+  Mathematics,
+  English,
+  Geography: Biology,
+  History,
+} = matriculation2014;
+
+console.log(matriculation2014);
+console.log(Biology);
+
+// //Destrukturyzacja tablic
+// //Nawiasy [], zamiast {}
+// //KOlejność zmiennych będzie miała znaczenie
+
+// const rgba = [150, 204, 58];
+
+// let red, green, blue;
+
+// [red, green, blue] = rgba;
+
+// console.log(`R: ${red}, G: ${green}, B ${blue}`);
+
+// const rgbb = [150, 204, 58];
+
+// const [black, ...colors] = rgbb;
+
+// console.log(black);
+// console.log(colors);
 
 
 

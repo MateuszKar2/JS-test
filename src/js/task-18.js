@@ -69,8 +69,8 @@ const peopleCoursesFlat = people.flatMap(people => people.courses);
 console.log(peopleCoursesFlat);
 // ['matematyka', 'fizyka', 'informatyka', 'matematyka', 'fizyka', 'biologia'];
 
-// //Metoda .filter()
-// //Warunek sprawdza
+//Metoda .filter()
+//Warunek sprawdza
 
 const values = [ 23, 89, -4, 24, 1, -90, -45];
 
@@ -79,4 +79,19 @@ console.log(positiveValue);
 
 const otherValue = values.filter(value => value < 0 && value > -30);
 console.log(otherValue);
+
+const peopleCoursesUniques = peopleCoursesFlat.filter((course, index, array) => array.indexOf(course) === index);
+console.log(peopleCoursesUniques);
+
+//Metoda .find()
+//Znajduje element
+
+const colorPickerOptions = [
+  { label: "red", color: "#F44336" },
+  { label: "green", color: "#4CAF50" },
+  { label: "blue", color: "#2196F3" },
+  { label: "pink", color: "#E91E63" },
+  { label: "indigo", color: "#3F51B5" },
+];
+
 

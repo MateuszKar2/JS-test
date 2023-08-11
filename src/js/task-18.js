@@ -69,3 +69,14 @@ const peopleCoursesFlat = people.flatMap(people => people.courses);
 console.log(peopleCoursesFlat);
 // ['matematyka', 'fizyka', 'informatyka', 'matematyka', 'fizyka', 'biologia'];
 
+// //Metoda .filter()
+// //Warunek sprawdza
+
+const values = [ 23, 89, -4, 24, 1, -90, -45];
+
+const positiveValue = values.filter(value => value >= 0);
+console.log(positiveValue);
+
+const otherValue = values.filter(value => value < 0 && value > -30);
+console.log(otherValue);
+

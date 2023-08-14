@@ -18,4 +18,7 @@ const bookShelf = {
 
   //W zasięgu globalnym ,,this" to undefined
   //Wartość ,,kontekstu" będzie określony nie w momencie utworzenia ale w momencie wywołania
+  //Funkcje strzałkowe nie mają własnego this
+
+  
 

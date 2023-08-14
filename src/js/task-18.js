@@ -111,30 +111,57 @@
 // const colorSecound = colorPickerOptions.findIndex(option => option.label === "black");//{-1}
 // console.log(colorSecound);
 
-//Metoda evey()/some() sprawdza czy wszystkie/jeden el. tablicy spełania wwarunek. Odp. boolean
+// Metoda evey()/some() sprawdza czy wszystkie/jeden el. tablicy spełania wwarunek. Odp. boolean
 
 
-const ourNumbers = [2, 67, 5, 90, -2];
-console.log(ourNumbers);
+// const ourNumbers = [2, 67, 5, 90, -2];
+// console.log(ourNumbers);
 
-const myNumbers = ourNumbers.every(value => value > 2);
-console.log(myNumbers)
+// const myNumbers = ourNumbers.every(value => value > 2);//false
+// console.log(myNumbers)
 
-const yourNumbers = ourNumbers.some(value => value > 2);
-console.log(yourNumbers)
+// const yourNumbers = ourNumbers.some(value => value > 2);//true
+// console.log(yourNumbers)
 
 
 
-const fruits = [
-  { name: "apples", amount: 100 },
-  { name: "bananas", amount: 0 },
-  { name: "grapes", amount: 50 },
-];
+// const fruits = [
+//   { name: "apples", amount: 100 },
+//   { name: "bananas", amount: 0 },
+//   { name: "grapes", amount: 50 },
+// ];
 
-// every zwróci true tylko wtedy, jeśli będzie więcej niż 0 sztuk wszystkich owoców
-const allAvailable = fruits.every(fruit => fruit.amount > 0);// false
-console.log(allAvailable)
+// // every zwróci true tylko wtedy, jeśli będzie więcej niż 0 sztuk wszystkich owoców
+// const allAvailable = fruits.every(fruit => fruit.amount > 0);// false
+// console.log(allAvailable)
 
-// some zwróci true tylko wtedy, jeśli będzie więcej niż 0 sztuk przynajmniej jednego owocu
-const anyAvailable = fruits.some(fruits => fruits.amount > 0);// true
-console.log(anyAvailable)
+// // some zwróci true tylko wtedy, jeśli będzie więcej niż 0 sztuk przynajmniej jednego owocu
+// const anyAvailable = fruits.some(fruits => fruits.amount > 0);// true
+// console.log(anyAvailable)
+
+// //Metoda reduce()
+// //Używana gdy chcemy wiele zredukować do jednego, np. pięc liczb w tablicy do jej sumy
+
+const total = [24, 7, 3, 17, 9]
+ 
+const totalAll = total.reduce((previousValue, number) => {
+  return previousValue + number;
+}, 0);
+
+console.log(totalAll);
+
+//Metoda sort()
+//Modyfikuje orginalną tablicę- tworzymy kopię orginalnej tablicy
+
+
+const myTotalAll = [...total].sort();
+
+console.log(myTotalAll);//[17, 24, 3, 7, 9];
+
+const youtTotalAll = [...total].sort((a, b) => a - b);
+
+console.log(youtTotalAll);//[3, 7, 9, 17, 24];
+
+const ourTotalAll = [...total].sort((a, b) => b - a);
+
+console.log(ourTotalAll);//[24, 17, 9, 7, 3];

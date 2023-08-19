@@ -123,8 +123,8 @@ dog.drinks = true;
     });
     console.log(mango);// User { name: "Mango", email: "mango@mail.com" }
 
-//GETTERY i SETTERY (get/set)
-//Getter jest wykonywany podczas próby uzyskania wartości właściwości, a setter jest wykonywany podczas próby jej zmiany
+// GETTERY i SETTERY (get/set)
+// Getter jest wykonywany podczas próby uzyskania wartości właściwości, a setter jest wykonywany podczas próby jej zmiany
 
     // I. Getter email
     //     get email() {
@@ -136,9 +136,23 @@ dog.drinks = true;
     //     this.#email = newEmail;
     // }
 
+//WŁAŚCIWOŚCI STATYCZNE oprócz właściwości publicznych i prywatnych
+//możemy deklarować właściwości statyczne. Są 
 
+    // Deklaracja i inicjalizacja właściwości statycznej
+//   static Roles = {
+//     ADMIN: "admin",
+//     EDITOR: "editor",
+//   };
 
+//można deklarować również metody statyczne, mogą być zarówno publiczne jak prywatne
 
+//DZIEDZICZENIE KLAS
+//Słowo kluczowe ,,extends" pozwala na implementacje dziedziczenia klas, gdy jedna klasa dzidziczy właściwości i metody innych klas
 
+class Child extends Parent {
 
+}
 
+//*klasa potomna nie dziedziczy prywatnych właściwości i metod po klasie nadrzędnej.
+  

@@ -18,10 +18,6 @@
 //zwraca pseudotablicę wszystkich elementów, jeżeli nic nie znajdzie zwróci pusta tablicę
 
 const listWithId = document.querySelector("#menu");
-console.log(listWithId);
-listWithId.style.textTransform = 'uppercase';
-listWithId.style.fontSize = '30px';
-listWithId.style.color = 'red';
 
 const listWithClass = document.querySelector('.menu');
 console.log(listWithClass);
@@ -47,15 +43,109 @@ const image = document.querySelector(".image");
 console.log(image.src);
 image.src = 'https://placeimg.com/640/480/tech';
 console.log(image.src);
+console.log(message.textContent);
 //właściwość ,,classList" przechowuje obiekt z metodami pracy z klasami elementu
+
+console.log(message.classList.contains("materialize-textarea"));
+
+const btn = document.querySelector(".btn");
+console.log(btn.classList.contains("btn"));
+
+btn.classList.add("btn-2", "mojaNowaKlasa");
+console.log(btn.classList);
+
+btn.classList.remove("btn-2");
+console.log(btn.classList);
+
+btn.classList.toggle("btn-2");
+console.log(btn.classList);
+
+btn.classList.replace("btn-2", "btn-3");
+console.log(btn.classList);
+
 //włąściwość ,,style" służy do odczytywania i zmiany stylów wbudowanych (inline)
+
+console.log(listWithId);
+listWithId.style.textTransform = 'uppercase';
+listWithId.style.fontSize = '30px';
+listWithId.style.color = 'red';
+
 //atrybuty
+
+console.log(image.hasAttribute("src"));
+console.log(image.hasAttribute("btn"));
+
+console.log(image.getAttribute("src"));
+
+image.setAttribute("alt", "amazingnature");
+console.log(image.getAttribute("alt"));
+
+image.removeAttribute("alt");
+console.log(image.getAttribute("alt"));
+
+console.log(image.attributes);
+
+
 //atrybuty data
 
-//właściwość innerHTML: czytanie, zmiana, dodanie
+const saveBtn = document.querySelector('button[data-action="save"]')
+console.log(saveBtn.dataset.action);
+const closeBtn = document.querySelector('button[data-action="close"]')
+console.log(closeBtn.dataset.action);
+
+//Jest kilka sposobów na
+//tworzenie i usuwanie elementów
+//Pierwszym z nich jest 
+
+//I.tworzenie
+
+const heading = document.createElement("h1");
+console.log(heading);
+heading.textContent = "This is Warsaw"
+console.log(heading);
+
+//II.dodawanie
+
+saveBtn.after(heading);
+saveBtn.before(closeBtn);
+
+//III.usuwanie
+
+saveBtn.remove();
+
+//drugim jest wykorzystanie właściwośći innerHTML: 
+
+
+//I.czytanie
+
+const article = document.querySelector("article");
+article.style.color = "black";
+
+console.log(article.innerHTML);
+
+const title = document.querySelector(".title");
+console.log(title.innerHTML);
+
+const text = document.querySelector(".text");
+console.log(text.innerHTML);
+
+//II.zmiana
+
+title.innerHTML = 'New and forever I am';
+title.style.color = "green";
+console.log(title.innerHTML);
+
+//III.uwuwanie/wyczyszczeni(wystarczy podać pusty string)
+// title.innerHTML = "";
+
+//IV.dodawanie
+const myString = `<p class="my-string">here</p>`
+title.innerHTML += myString;
+console.log(title);
 
 //metoda ,,insertAdjacentHTML", przyjmuje 4 pozycje
 // elem.insertAdjacentHTML(position, string);
+title.insertAdjacentHTML("afterbegin", myString);
 
 //ŁADOWANIE STRINGÓW
 //Atrybut defer

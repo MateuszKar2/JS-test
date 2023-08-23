@@ -1,7 +1,25 @@
-console.log("hello")
-console.log("Jestem")
-const arr = [1, 5, 3, 9, 3];
-console.log(arr.indexOf(2));
-console.log(arr[1]);
-console.log("Hello");
-console.log("Jestem")
+//Number of categories: 3
+
+//Category: Animals
+// Elements: 4
+
+// Category: Products
+// Elements: 3
+
+// Category: Technologies
+// Elements: 5
+
+const categories = document.querySelector('#categories');
+
+const items = document.querySelectorAll('.item');
+
+console.log(`Numbers of categories: ${items.length}`);
+
+items.forEach(item => {
+    const title = item.querySelector('h2').textContent;
+    const elements = item.querySelectorAll('li').length;
+
+
+console.log(`Category: ${title}`);
+console.log(`Elements: ${elements}`);
+});

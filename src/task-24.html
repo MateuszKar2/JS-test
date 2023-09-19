@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttle and Debounce</title>
+    <link rel="stylesheet" href="css/task-24.css" />
+  </head>
+  <body>
+    <p class="cta">Scroll me</p>
+
+<div class="event-counter">
+  <div class="box">
+    <p>No timing function</p>
+    <span class="output vanilla">0</span>
+  </div>
+
+  <div class="box">
+    <p>Throttled</p>
+    <span class="output throttled">0</span>
+  </div>
+
+  <div class="box">
+    <p>Debounced</p>
+    <span class="output debounced">0</span>
+  </div>
+</div>
+
+        <!-- Lodash library script file -->
+    <script
+    async
+    src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+    integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+    <script src="js/task-24.js" type="module"></script>
+  </body>
+</html>

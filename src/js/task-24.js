@@ -62,7 +62,7 @@ document.addEventListener("scroll", () => {
 
 document.addEventListener(
     "scroll", 
-    _.throttle(() => {//może być wywołana co 3s.
+    _.throttle(() => {//może być wywołana co 0.3s.
         eventCounter.throttled += 1;
         throttledOutput.textContent = eventCounter.throttled;
     }, 300)
@@ -70,7 +70,7 @@ document.addEventListener(
 
 document.addEventListener(
     "scroll",
-    _.debounce(() => {//wywołana gdyb między wydarzeniami nastapi przerwa 3s.
+    _.debounce(() => {//wywołana gdyb między wydarzeniami nastapi przerwa 0.3s.
         eventCounter.debounced += 1;
         debouncedOutput.textContent = eventCounter.debounced;
     }, 300)

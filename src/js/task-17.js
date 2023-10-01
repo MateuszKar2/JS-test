@@ -30,7 +30,6 @@ registerGuest("Mango", function greet(name) {
 
 // repeatLog(25);
 
-
 //Petla forEach...porównanie z klasycznym for
 
 const numbers = [21, 43, 2, 9, 17];

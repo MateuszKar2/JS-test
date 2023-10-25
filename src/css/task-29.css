@@ -1,0 +1,28 @@
+body {
+    margin: 16px;
+    line-height: 1.5;
+    color: #212121;
+    font-family: sans-serif;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .user-list {
+    margin-left: 50px;
+    list-style: none;
+    padding: 24px;
+  }
+ 
+  .user-list li:not(:last-child) {
+    margin-bottom: 16px;
+  }  
+
+  .btn {
+    width: 150px;
+    height: 50px;
+    background-color: lightblue;
+    border: 5px solid blue;
+    border-radius: 5%;
+  }

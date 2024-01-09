@@ -1,7 +1,16 @@
 
 //Praca z backendem może być utrudniona, 
 //ponieważ po jednej operacji asynchronicznej trzeba wysłać kolejne żądanie do serwera, 
-//korzystając z otrzymanych danych, i tak dalej kilka razy
+//Po wysłaniu zadania do "my-api.com/me", w odpowiedzi otrzymamy unikalny TOKEN dostępu do chronionych zasobów
+
+// const fetchFriends = () => {
+//   return fetch("my-api.com/me").then(token => {
+//      console.log(token);
+//   });
+// };
+
+//Następnie musisz poprosić o profil użytkownika z "my-api.com/profile", ale PROFIL NIE JEST KOMPLETNY !!!!!!!! zawiera tylko krytyczne informacje
+
 
 // const fetchFriends = () => {
 //     return fetch("my-api.com/me")
@@ -18,7 +27,8 @@
 //     .catch(error => console.error(error));
 
 
-//Składania funkcji asynchronicznych pomagają ominąć ten problem. 
+const oldMessage =  "Nie jest to najbardziej czytelny kod. Dlatego korzystamy ze składni funkcji asynchronicznej";
+// console.log(oldMesage);
 //Działają przy tym doskonale w połączeniu z metodami then() i catch(), 
 //ponieważ gwarantują zwrócenie obietnicy.
 
@@ -37,6 +47,9 @@
 // który wygląda na pierwszy rzut oka jak synchroniczny
 // Składnia async/await opiera się “pod spodem” na obietnicach, więc nie blokuje głównego wątku programu.
 
+//Aby zadeklarować asynchroniczną funkcję strzałkową, dodaj słowo kluczowe async przed listą parametrów. 
+//Wewnątrz możesz wtedy użyć operatora await i umieścić coś po jego prawej stronie, co zwróci obietnicę.
+
 // const fetchUsers = async () => {
 //     const response = await fetch("https://jsonplaceholder.typicode.com/users");
 //     const users = await response.json();
@@ -46,17 +59,21 @@
 // fetchUsers().then(users => console.log(users));
 
 
-// Każda funkcja może być asynchroniczna
-// Wszystkie będą mogły używać operatora await i na pewno zwrócą obietnicę, 
-// ponieważ będą to funkcje asynchroniczne.
+//Zasady async/await
+// Operator await może być użyty tylko w treści funkcji asynchronicznej (async)
+// Operator await zawiesza funkcję do czasu spełnienia obietnicy (fulfilled lub rejected).
+// Jeśli obietnica została spełniona (fulfilled), operator await zwróci jej wartość.
+// Jeśli obietnica została odrzucona (rejected), operator await wyrzuci błąd.
+// Funkcja asynchroniczna zawsze zwraca obietnicę, więc każda zwracana wartość będzie jej wartością.
+// Jeśli nie określisz zwracanej wartości, zostanie zwrócona obietnica o wartości undefined.
 
 
 
 
 
 // Obsługa błedów
-// Jeśli wynik funkcji asynchronicznej (obietnica) nie jest używany w kodzie zewnętrznym,
-//  błędy są obsługiwane w ciele funkcji za pomocą konstrukcji try...catch
+// Jeśli wynik funkcji asynchronicznej (obietnica) nie jest używany w kodzie zewnętrznym, błędy są obsługiwane w ciele funkcji za pomocą konstrukcji try...catch
+// Wartość parametru error w bloku catch to błąd, który wygeneruje await, jeśli obietnica zostanie odrzucona
 
 // const fetchUsers = async () => {
 //     try {
@@ -97,19 +114,24 @@
 // W naszym przypadku są one całkowicie niezależne, więc trzeba lepiej uruchamiać je równolegle. W tym celu tworzona jest tablica obietnic, 
 // która wykorzystywana jest w metodzie Promise.all() aby oczekiwać na ich wykonanie. 
 
-const fetchUsers = async () => {
-    const baseUrl = "https://jsonplaceholder.typicode.com";
-    const userIds = [1, 2, 3];
+// const fetchUsers = async () => {
+//     const baseUrl = "https://jsonplaceholder.typicode.com";
+//     const userIds = [1, 2, 3];
 
-    const arrayOfPromises = userIds.map(async userId => {
-        const response = await fetch(`${baseUrl}/users/${userId}`);
-        return response.json();
-      });
+//     const arrayOfPromises = userIds.map(async userId => {
+//         const response = await fetch(`${baseUrl}/users/${userId}`);
+//         return response.json();
+//       });
 
-      const users = await Promise.all(arrayOfPromises);
-      console.log(users);
-    };
+//       const users = await Promise.all(arrayOfPromises);
+//       console.log(users);
+//     };
     
-    fetchUsers();
+//     fetchUsers();
 //Przy takim podejściu żądania są uruchamiane równolegle, co oszczędza czas oczekiwania na ich wykonanie, 
 //który jest równy czasowi trwania „najwolniejszego” z nich. Ta technika jest odpowiednia tylko wtedy, gdy żądania są od siebie niezależne.
+
+
+
+
+

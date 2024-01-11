@@ -103,7 +103,7 @@ fetchUsersBtn.addEventListener("click", () => {
 
 function fetchUsers() {
   return fetch//("https://jsonplaceholder.typicode.com/users"
-  ("https://jsonplaceholder.typicode.com/users?_limit=7&_sort=name"//Parametry zapytania limit-7, posegregowane wg. name
+  ("https://jsonplaceholder.typicode.com/users?_limit=5&_sort=name"//Parametry zapytania limit-7, posegregowane wg. name
   ).then((response) => {
       if (!response.ok) {
         throw new Error(response.status);

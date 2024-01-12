@@ -150,3 +150,28 @@ function renderUsers(users) {
 
 //Domyślnie żądanie HTTP można wykonać tylko w bieżącej witrynie. Podczas próby wysłania żądania do innej domeny, 
 //portu lub protokołu, czyli wykonania żądania międzydomenowego, przeglądarka wyświetla błąd. Odbywa się to ze względów bezpieczeństw
+
+
+fetch("https://jsonplaceholder.typicode.com/users?${searchParams}")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // Data handling
+  })
+  .catch(error => {
+    // Error handling
+  });
+
+ const searchParams = new URLSearchParams({
+  _linit: 3,
+  _sort: "name",
+ });
+
+ console.log(searchParams.toString());
+
+ const url = `https://jsonplaceholder.typicode.com/users?${searchParams}`;
+ console.log(url);

@@ -174,4 +174,5 @@ fetch("https://jsonplaceholder.typicode.com/users?${searchParams}")
  console.log(searchParams.toString());
 
  const url = `https://jsonplaceholder.typicode.com/users?${searchParams}`;
+ 
  console.log(url);

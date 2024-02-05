@@ -9,6 +9,12 @@
 // Category: Technologies
 // Elements: 5
 
+
+
+
+
+
+
 const categories = document.querySelector('#categories');
 
 const items = document.querySelectorAll('.item');

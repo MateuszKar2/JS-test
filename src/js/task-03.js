@@ -1,3 +1,4 @@
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -13,11 +14,7 @@ const images = [
   },
 ];
 
-
-
-
 const gallery = document.querySelector(".gallery");
-console.log("gallery");
 
 const createGallery = images => {
   const galleryItems = images.map(image => 
@@ -26,4 +23,6 @@ const createGallery = images => {
 gallery.insertAdjacentHTML('afterbegin', galleryItems.join(''));
   };
   createGallery(images);
+
+
 

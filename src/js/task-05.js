@@ -1,3 +1,5 @@
+
+
 const inputBtn = document.querySelector("#name-input");
 const outputBtn = document.querySelector("#name-output");
 
@@ -10,7 +12,6 @@ function clickInputChange(event) {
         outputBtn.textContent = 'Anonymous';
     }
 };
-
 
 
  

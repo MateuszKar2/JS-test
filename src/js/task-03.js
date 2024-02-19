@@ -14,15 +14,20 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
+
+
+
+
+const gallery = document.querySelector('.gallery');
+
 
 const createGallery = images => {
   const galleryItems = images.map(image => 
-   `<li><img class="picture" src=${image.url} alt=${image.alt}/></li>`,
-);
-gallery.insertAdjacentHTML('afterbegin', galleryItems.join(''));
-  };
-  createGallery(images);
+    `<li><img class="picture" src=${image.url} alt=${image.alt}/></li>`,
+  );
+  gallery.insertAdjacentHTML('afterbegin', galleryItems.join(''));
+};
+createGallery(images);
 
 
 

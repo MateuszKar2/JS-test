@@ -1,13 +1,13 @@
-const node = "najważniejza funkcjonalność Node.js- możliwość wykonywania kodu po za przeglądarką !!!"
+const node = "najważniejsza funkcjonalność Node.js- MOŻLIWOŚĆ WYKONYWANIA KODU PO ZA PRZEGLADARKĄ !!!"
 console.log(node);
 
 const npm = "instaluje on wymagane pakiety i zapewnia przyjazny dla użytkownika interfejs do pracy z nimi"
 console.log(npm);
 
 //NPM składa się z 3 elementów
-//strona npmjs.com- wyszukiwania i dokumentacja pakietów
-//interfejs wiersza poleceń- program uruchamiany w terminalu. Udostepnia zestaw polceń do pracy z rejestrem i pakietami
-//rejestr pakietów - dużapubliczna baza danych narzędzi programistycznych
+//strona npmjs.com          -wyszukiwania i dokumentacja pakietów
+//interfejs wiersza poleceń         -program uruchamiany w terminalu. Udostepnia zestaw polceń do pracy z rejestrem i pakietami
+//rejestr pakietów          -duża publiczna baza danych narzędzi programistycznych
 
 
 //podstawowe polecenia(jest ich znacznie więcej)
@@ -33,7 +33,6 @@ const goodbyeMessage = "goodbye!";
 export const hello = () => helloMessage;
 export const goodbye = () => goodbyeMessage;
 
-//plik ,,index.js"
 
 // import { hello, goodbye } from "./greeter";
 
@@ -41,4 +40,4 @@ export const goodbye = () => goodbyeMessage;
 // console.log(goodbye());
 
 
-//WEBPACK to konstruktor modułów JS. Ustawia kolejność łączenia modułów, łączy, minifikuje, pakuje i wiele więcej
+//WEBPACK to konstruktor modułów JS. Ustawia kolejność łączenia modułów, łączy, minifikuje, pakuje oraz wiele więcej

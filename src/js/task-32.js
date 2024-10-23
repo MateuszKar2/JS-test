@@ -130,7 +130,7 @@ const oldMessage =  "Nie jest to najbardziej czytelny kod. Dlatego korzystamy ze
 //     fetchUsers();
 
 //Przy takim podejściu żądania są uruchamiane równolegle, co oszczędza czas oczekiwania na ich wykonanie, 
-//który jest równy czasowi trwania „najwolniejszego” z nich. Ta technika jest odpowiednia tylko wtedy, gdy żądania są od siebie niezależne.
+//który jest równy czasowi trwania „najwolniejszego” z nich. Ta technika jest odpowiednia tylko wtedy, gdy żądania są od siebie niezależne..
 
 
 

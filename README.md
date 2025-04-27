@@ -1,4 +1,4 @@
-# JS Test - A Collection of JavaScript Exercises
+ # JS Test - A Collection of JavaScript Exercises
 
 This repository contains a collection of exercises that I completed in order to learn the basics of JavaScript, HTML, and CSS. The projects cover various aspects of frontend programming, such as DOM manipulation, basic algorithms, and web page interactivity.
 
